@@ -34,7 +34,7 @@
     
     /* LOAD DATA */
     
-    d3.csv('../data/squirrelActivities.csv', d3.autoType)
+    d3.csv('data/squirrelActivities.csv', d3.autoType)
     .then(raw_data => {
       console.log("data", raw_data);
       // save our data to application state
