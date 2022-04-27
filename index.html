@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Map-Oriented Visualization</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!-- NEW add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!-- Load Leaflet code library - see updates at http://leafletjs.com/download.html -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+  <!-- NEW for CSV data on Leaflet maps -->
+  <!-- see online resources such as handsondataviz.com for more examples  -->
+  <!-- Load jQuery and PapaParse to read data from a CSV file -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    
+  <!-- Position the map with Cascading Style Sheet (CSS) -->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <h1>Map-Oriented Project</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+      <!-- Insert HTML division tag to layout the map -->
+         <div id='map'> </div>
+      </div>
+     </div>
+  </div>
+
+ <!-- text content 1 -->
+ <div class="container">
+  <div class="row">
+    <div class="col-12">
+
+    <div class="long-text" id="text-one">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      </div>
+     </div>
+  </div>
+ 
+   <!-- small chart content -->
+
+   <div class="container">
+    <div class="row">
+      <div class="col-6">
+
+
+        <label for="dropdown">Filter Selection</label>
+        <select id="dropdown" name="dropdown"></select>
+        <div class="svg" id='chart'></div>
+      </div>
+      
+
+
+
+   <!-- text content 2 -->
+
+   <div class="col-4">
+      <div class="long-text" id="text-two">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
+      </div>
+    </div>
+ </div>
+
+    <!-- separate <div> for credits + styling credits in CSS -->
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-9 col-md-6 col-lg-8">
+        <div class="credits">
+          <p>Sources and Credits</p>
+          <p>Data sources:
+            source links</p>
+            <p>Literature sources: 
+              Bibliographic reference in MLA or APA or Chicago style format.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Insert Javascript (.js) code to create the map -->
+
+  <script src="./squirrel-map.js" type="module"></script>
+  <script src="./lib/d3.js"></script>
+  <script src="./squirrel-chart.js" type="module"></script>
+</body>
+</html>
