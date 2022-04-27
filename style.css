@@ -1,0 +1,56 @@
+body { 
+  margin:0; 
+  padding:4%; 
+}
+
+/* visualization related */
+
+#map {
+  position: relative;
+  border: 1px solid gray;
+  border-radius: 8px;
+  height: 400px;  /* or as desired */
+  width: 100%;  /* This means "100% of the width of its container", the .col-*/
+}
+
+#chart { 
+  position: relative;
+  height: 100%;  /* or as desired */
+  width: 100%;  /* This means "100% of the width of its container"*/
+  max-width: 500px;
+}
+
+svg {
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+
+/* bootstrap related */
+
+.container, .container-fluid {
+  background-color: white;
+  border: gainsboro 0px;
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.row {
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+/* extra font styling */
+
+#text-two {
+  font-style: italic;
+  font-size: .8em;
+  padding-top: 30px;
+}
+
+/* credits */
+
+.credits  {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: .8em;
+}
