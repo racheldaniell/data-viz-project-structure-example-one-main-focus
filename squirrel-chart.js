@@ -81,6 +81,7 @@
       // change the d3.select to SPECIFIC ID for this graph's <div> instead of just the body
       tooltip = d3.select("#chart")
       .append("div")
+      .attr("class", "tooltip")
       .attr("class", "tooltip-bar")
       .style("position", "absolute")
       .style("z-index", "10")
