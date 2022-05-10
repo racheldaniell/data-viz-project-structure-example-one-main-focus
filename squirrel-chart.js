@@ -193,8 +193,7 @@
               .style("top",  tipPosY + "px")
                 //.html(html)
             })
-        
-            // "event" is no longer needed in the parameter here
+       
             .on("mouseout", function(event, d){
             //.on("mouseout", function(d){
               tooltip
