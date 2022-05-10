@@ -81,7 +81,7 @@
       // change the d3.select to SPECIFIC ID for this graph's <div> instead of just the body
       tooltip = d3.select("#chart")
       .append("div")
-      .attr("class", "tooltip")
+      .attr("class", "tooltip-bar")
       .style("position", "absolute")
       .style("z-index", "10")
       .style("visibility", "hidden")
@@ -129,11 +129,8 @@
           .attr("value", d => d)
           .text(d => d)
     
-          // dropdown.on("change", event => {
-          // change this to use NON-arrow syntax for the function
           dropdown.on("change", function () {
             //state.selection = event.target.value
-            // better to use the "this." syntax now too
             state.selection = this.value
             console.log(state.selection)
             draw();
@@ -191,11 +188,9 @@
               d3.select('.tooltip')
               .style("left", tipPosX + "px")
               .style("top",  tipPosY + "px")
-                //.html(html)
             })
-       
+
             .on("mouseout", function(event, d){
-            //.on("mouseout", function(d){
               tooltip
               .html(``)
               .style("visibility","hidden");
