@@ -159,46 +159,31 @@
       .attr("x", d=>xScale(d.activity))
       .attr("y", d=>yScale(d.count))
       .attr("fill", staticColor)
-        // remove the term "event" here in parens 
-        //.on("mouseover", function(event,d,i){
-        .on("mouseover", function(d,i){
-          tooltip
-          .html(`<div>activity: ${d.activity}</div><div>sightings: ${d.count}</div>`)
-          .style("visibility", "visible")
-          .style("opacity", .8)
-          .style("background", tipColor)
-          d3.select(this)
-              .transition()
-              .attr("fill", hoverColor);
-          })
-          // here make mouseover behavior onn d3.select(this)
-          // function must be written out, not with arrow function syntax, for "this" 
-          // positioning is via d3.event reference to rect.bar attributes
-          .on('mousemove', 
-            function(d){
-              let xPos = d3.select(this).attr("x")
-              let width = d3.select(this).attr("width")/2
-              let tipPosX = +xPos
-              let yPos = d3.select(this).attr("y")
-              let height = d3.select(this).attr("height")-2
-              let tipPosY = +yPos
-              console.log(xPos)
-              console.log(yPos)
-              console.log('tipPos '+tipPosX+" - "+tipPosY)
-              d3.select('.tooltip').style("display", null)
-              d3.select('.tooltip')
-              .style("left", tipPosX + "px")
-              .style("top",  tipPosY + "px")
-            })
 
-            .on("mouseout", function(event, d){
-              tooltip
-              .html(``)
-              .style("visibility","hidden");
-              d3.select(this)
-                  .transition()
-                  .attr("fill", staticColor);
-              });
+      .on("mouseover", function(event,d,i){
+      tooltip
+      .html(`<div>activity: ${d.activity}</div><div>sightings: ${d.count}</div>`)
+      .style("visibility", "visible")
+      .style("opacity", .8)
+      .style("background", tipColor)
+      d3.select(this)
+          .transition()
+          .attr("fill", hoverColor);
+      })
+      .on('mousemove', function (event) {
+        tooltip
+          .style('top', event.pageY - 10 + 'px')
+          .style('left', event.pageX + 10 + 'px');
+    })
+    .on("mouseout", function(event, d){
+      tooltip
+      .html(``)
+      .style("visibility","hidden");
+      d3.select(this)
+          .transition()
+          .attr("fill", staticColor);
+      });
+
 
     
     console.log(state)
