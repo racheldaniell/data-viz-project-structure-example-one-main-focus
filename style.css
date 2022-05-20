@@ -53,6 +53,9 @@ svg {
 .credits  {
   font-family: 'Courier New', Courier, monospace;
   font-size: .8em;
+}
+
+#creditlines   {
   padding-top: 10px;
   padding-bottom: 10px;
   position: absolute;
