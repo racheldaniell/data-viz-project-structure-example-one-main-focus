@@ -160,6 +160,7 @@
       .on("mouseover", function(event,d,i){
       tooltip
       .html(`<div>activity: ${d.activity}</div><div>sightings: ${d.count}</div>`)
+      .attr("class","tooltip-bar")
       .style("visibility", "visible")
       .style("opacity", .8)
       .style("background", tipColor)
@@ -180,7 +181,6 @@
           .transition()
           .attr("fill", staticColor);
       });
-
 
     
     console.log(state)
