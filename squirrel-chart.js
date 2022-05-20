@@ -80,6 +80,7 @@
       .append("div")
       .attr("class", "tooltip")
       .attr("class", "tooltip-bar")
+       // give a specific ID as well if needed to specify amongst other charts
       .attr("id", "tooltip-bar-chart")
       .style("position", "absolute")
       .style("z-index", "999")
@@ -169,16 +170,12 @@
           .transition()
           .attr("fill", hoverColor);
       })
-      .on('mousemove', function (event) {
-        
-       // tooltip
-          
-        d3.pointer(event)
-        .select(this)
-        .style("left", `${e.layerX}px`)
-        .style("top", `${e.layerX}px`);
-
-    })
+       .on("mousemove", function(){
+             // CHANGE: refer back to specific ID for the 1 chart tooltip div
+              d3.select("#tooltip-bar-chart")
+              .style("top", d3.event.pageY - 10 + "px")
+              .style("left", d3.event.pageX + 10 + "px");
+          })
     .on("mouseout", function(event, d){
       tooltip
       .html(``)
