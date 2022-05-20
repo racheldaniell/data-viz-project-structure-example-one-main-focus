@@ -169,10 +169,10 @@
           .attr("fill", hoverColor);
       })
       .on('mousemove', function (event) {
-        let pos = d3.mouse(this);
+        
         tooltip
-          .style('top', pos[0] - 10 + 'px')
-          .style('left', pos[1] + 10 + 'px');
+          .style('top', event.pageY - 10 + 'px')
+          .style('left', event.pageX + 10 + 'px');
     })
     .on("mouseout", function(event, d){
       tooltip
