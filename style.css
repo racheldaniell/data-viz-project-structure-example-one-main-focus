@@ -14,7 +14,7 @@ body {
 }
 
 #chart { 
-  position: absolute;
+  position: relative;
   height: 100%;  /* or as desired */
   width: 100%;  /* This means "100% of the width of its container"*/
   max-width: 500px;
@@ -56,8 +56,7 @@ svg {
 }
 
 #creditlines   {
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 10px;
-  position: fixed;
-  bottom: 0;
+  position: relative;
 }
