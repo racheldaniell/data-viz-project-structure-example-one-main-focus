@@ -170,11 +170,11 @@
           .transition()
           .attr("fill", hoverColor);
       })
-       .on("mousemove", function(){
+       .on("mousemove", function(event){
              // CHANGE: refer back to specific ID for the 1 chart tooltip div
               d3.select("#tooltip-bar-chart")
-              .style("top", d3.event.pageY - 10 + "px")
-              .style("left", d3.event.pageX + 10 + "px");
+              .style("top", d3.pointer.pageY - 10 + "px")
+              .style("left", d3.pointer.pageX + 10 + "px");
           })
     .on("mouseout", function(event, d){
       tooltip
