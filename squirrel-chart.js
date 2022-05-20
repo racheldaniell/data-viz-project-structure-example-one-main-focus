@@ -84,7 +84,7 @@
       .attr("class", "tooltip")
       .attr("class", "tooltip-bar")
       .style("position", "absolute")
-      .style("z-index", "10")
+      .style("z-index", "999")
       .style("visibility", "hidden")
       .style("opacity", 0.7)
       .style("padding", "8px")
