@@ -66,7 +66,7 @@
         //add class for CSS use
         .attr("class", "chart")
         .style('background', "tan")
-        .attr(
+        //.attr(
             'viewBox',
             `0 0 ${width + margin.left + margin.right} ${
               height + margin.top + margin.bottom
