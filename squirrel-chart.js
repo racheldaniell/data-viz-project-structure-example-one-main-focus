@@ -171,8 +171,10 @@
       .on('mousemove', function (event) {
         
         tooltip
-          .style('top', event.pageY - 10 + 'px')
-          .style('left', event.pageX + 10 + 'px');
+     // d3.select("#tooltip")
+        .style("left", `${e.layerX}px`)
+        .style("top", `${e.layerX}px`);
+
     })
     .on("mouseout", function(event, d){
       tooltip
