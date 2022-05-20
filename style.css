@@ -18,7 +18,6 @@ body {
   height: 100%;  /* or as desired */
   width: 100%;  /* This means "100% of the width of its container"*/
   max-width: 500px;
-  max-height: 400px;
 }
 
 svg {
