@@ -80,6 +80,7 @@
       .append("div")
       .attr("class", "tooltip")
       .attr("class", "tooltip-bar")
+      .attr("id", "tooltip-bar-chart")
       .style("position", "absolute")
       .style("z-index", "999")
       .style("visibility", "hidden")
@@ -170,8 +171,8 @@
       })
       .on('mousemove', function (event) {
         
-        tooltip
-     // d3.select("#tooltip")
+       // tooltip
+        d3.select("#tooltip-bar-chart")
         .style("left", `${e.layerX}px`)
         .style("top", `${e.layerX}px`);
 
