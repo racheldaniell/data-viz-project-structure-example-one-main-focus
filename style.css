@@ -26,6 +26,17 @@ svg {
   border-radius: 8px;
 }
 
+/* tooltip placement finesse */
+
+.tooltip span {
+    display:none;
+}
+.tooltip:hover span {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+}
+
 /* bootstrap related */
 
 .container, .container-fluid {
