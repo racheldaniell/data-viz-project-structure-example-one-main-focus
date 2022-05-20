@@ -1,7 +1,4 @@
-// for nesting multiple charts in narrative, at VERY TOP wrap entire code in an export function
-// don't forget the close-curly-bracket at the VERY bottom of all the code
-
-// export function chart3() {
+// chart to insert within bootstrap container-row-column environment
 
     /* CONSTANTS AND GLOBALS */
 
@@ -188,5 +185,5 @@
     
     console.log(state)
     }
-    // if this is a chart you are copying into export function you need a final end curly bracket
-    //}
+
+
