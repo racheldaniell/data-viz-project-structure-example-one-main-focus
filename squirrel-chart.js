@@ -171,6 +171,8 @@
           .attr("fill", hoverColor);
       })
        .on("mousemove", function(event){
+              let x = d3.pointer.x,
+                   y = d3.pointer.y;
              // CHANGE: refer back to specific ID for the 1 chart tooltip div
               d3.select("#tooltip-bar-chart")
               .style("top", y - 10 + "px")
