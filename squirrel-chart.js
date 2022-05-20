@@ -174,7 +174,7 @@
        // tooltip
           
         d3.pointer(event)
-        .select("#tooltip-bar-chart")
+        .select(this)
         .style("left", `${e.layerX}px`)
         .style("top", `${e.layerX}px`);
 
