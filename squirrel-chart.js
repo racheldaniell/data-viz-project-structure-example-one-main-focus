@@ -172,7 +172,9 @@
       .on('mousemove', function (event) {
         
        // tooltip
-        d3.select("#tooltip-bar-chart")
+          
+        d3.pointer(event)
+        .select("#tooltip-bar-chart")
         .style("left", `${e.layerX}px`)
         .style("top", `${e.layerX}px`);
 
